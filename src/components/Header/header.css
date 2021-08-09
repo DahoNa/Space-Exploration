@@ -1,0 +1,18 @@
+header {
+  font-family: "earthorbiter";
+}
+
+header ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+header ul li a:hover {
+  color: grey;
+}
+
+header button i {
+  font-size: 30px;
+  color: whitesmoke;
+}

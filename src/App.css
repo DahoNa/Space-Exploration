@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "earthorbiter";
+  src: local("earthorbiter"),
+    url("../src/assets/fonts/earthorbiter.ttf") format("truetype");
+}
