@@ -7,641 +7,145 @@
   /* overflow: hidden; */
 }
 
-/* .solar.container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
-
 .solar .row {
   display: flex;
   justify-content: center;
   align-content: center;
+  padding-top: 10rem;
+  /* height: 100%; */
 }
 
-/* SOLAR PRESENTATION CSS */
-.solar-system-presentation {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-}
-
-.solar-presentation {
-}
-
-/* SOLAR INFO CSS */
-.solar-system-info {
-  height: 20vh;
-}
-.solar-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  height: 20vh;
-  top: 4rem;
-  bottom: 4rem;
-  height: 2rem;
-  width: 100%;
-  /* z-index: 9999; */
-}
-
-/* ORBIT CSS */
-.solar-system-orbit {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-}
-
-.solar-system {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  left: 0;
-  /* position: absolute; */
-  /* top: 11rem; */
-  /* padding: 6rem; */
-  transition: all 0.5s ease-in-out;
-  width: 100%;
-  z-index: 5;
-}
-/* .solar-system::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+/* SOLAR CIRCLE */
+.space-description {
   height: 100%;
-  opacity: 0.9;
-  background: linear-gradient(360deg, #000, transparent);
-  background: linear-gradient(rgba(0, 0, 40, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../../assets/images/background-stars.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
-.solar-orbit {
-  border: 0.05rem solid rgba(190, 190, 190, 0.05);
-  border-radius: 50%;
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  transition: border 0.2s ease-in-out;
 }
 
-.solar-orbit:hover {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-}
-
-.solar-orbit .solar-object {
-  height: 0;
-  left: 100%;
-  position: absolute;
-  top: 50%;
-  width: 0 !important;
-}
-
-.solar-orbit .solar-object::before {
-  border: 0.1rem solid rgba(24, 24, 24, 0.25);
-  border-radius: 50%;
-  content: "";
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-.solar-orbit.solar-sun {
-  /* animation: pulse-sun 2s linear infinite; */
-  border: 0;
-  height: 0;
-  width: 0;
-  z-index: 100;
-}
-
-.solar-orbit.solar-mercury {
-  animation: orbit 2.41s linear infinite;
-  height: 9.46rem;
-  width: 9.46rem;
-  z-index: 90;
-}
-
-.solar-orbit.solar-venus {
-  animation: orbit 6.15s linear infinite;
-  height: 11.64rem;
-  width: 11.64rem;
-  z-index: 80;
-}
-
-.solar-orbit.solar-earth {
-  animation: orbit 10s linear infinite;
-  height: 13.07rem;
-  width: 13.07rem;
-  z-index: 70;
-}
-
-.solar-orbit.solar-mars {
-  animation: orbit 18.81s linear infinite;
-  height: 15.32rem;
-  width: 15.32rem;
-  z-index: 60;
-}
-
-.solar-orbit.solar-asteroidbelt {
-  animation: orbit 45s linear infinite;
-  height: 20.89rem;
-  width: 20.89rem;
-  z-index: 55;
-}
-
-.solar-orbit.solar-jupiter {
-  animation: orbit 118.6s linear infinite;
-  height: 25.34rem;
-  width: 25.34rem;
-  z-index: 50;
-}
-
-.solar-orbit.solar-saturn {
-  animation: orbit 294.6s linear infinite;
-  height: 33.14rem;
-  width: 33.14rem;
-  z-index: 40;
-}
-
-.solar-orbit.solar-uranus {
-  animation: orbit 840.1s linear infinite;
-  height: 45.45rem;
-  width: 45.45rem;
-  z-index: 30;
-}
-
-.solar-orbit.solar-neptune {
-  animation: orbit 1648s linear infinite;
-  height: 56rem;
-  width: 56rem;
-  z-index: 20;
-}
-
-.solar-orbit .solar-moon {
-  animation: orbit 0.75s linear infinite;
-  height: 0.9rem;
-  top: 100%;
-  width: 0.9rem;
-}
-
-.solar-sun:hover > .solar-object::before {
-  box-shadow: 0 0 75vh #fa6d00;
-}
-
-.solar-sun > .solar-object::before {
-  background: #fa6d00;
-  box-shadow: 0 0 75vh rgba(250, 109, 0, 0.25);
-  height: 4rem;
-  transition: box-shadow 1s ease-in-out;
-  width: 4rem;
-  animation: pulse-sun 1.5s linear infinite;
-}
-
-.solar-mercury > .solar-object {
-  width: 0.54rem;
-}
-
-.solar-mercury > .solar-object::before {
-  background: #f9af0e;
-  height: 0.54rem;
-  width: 0.54rem;
-}
-
-.solar-mercury.solar-caption:hover ~ .solar-system .solar-mercury {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-venus > .solar-object {
-  width: 0.61rem;
-}
-
-.solar-venus > .solar-object::before {
-  background: #f1b72c;
-  height: 0.61rem;
-  width: 0.61rem;
-}
-
-.solar-venus.solar-caption:hover ~ .solar-system .solar-venus {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-earth > .solar-object {
-  width: 0.61rem;
-}
-
-.solar-earth > .solar-object::before {
-  background: #538fc1;
-  height: 0.61rem;
-  width: 0.61rem;
-}
-
-.solar-earth.solar-caption:hover ~ .solar-system .solar-earth {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-mars > .solar-object {
-  width: 0.56rem;
-}
-
-.solar-mars > .solar-object::before {
-  background: #f5805b;
-  height: 0.56rem;
-  width: 0.56rem;
-}
-
-.solar-mars.solar-caption:hover ~ .solar-system .solar-mars {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-asteroidbelt {
-  overflow: hidden;
-}
-
-.solar-asteroidbelt::after,
-.solar-asteroidbelt::before {
-  background: currentColor;
-  border-radius: 50%;
-  box-shadow: 0 0, -9.51rem -5.14rem, -10.45rem 4.86rem, -9.63rem 4.28rem,
-    -9.42rem -2.74rem, -9.45rem 4.11rem, -10.16rem 0.33rem, -10.02rem -3.26rem,
-    -10.23rem 4.8rem, -9.85rem -1.5rem, -9.35rem 0.76rem, -9.49rem -5.76rem,
-    -9.1rem -5.05rem, -10.21rem 5.14rem, -9.04rem -5.09rem, -9.33rem -5.44rem,
-    -9.78rem -2.21rem, -10.46rem 4.35rem, -9.38rem -3.34rem, -9.09rem 2.36rem,
-    -9.31rem 3.41rem, -10.21rem -5.39rem, -9.99rem 2.42rem, -9.59rem 0.01rem,
-    -9.51rem -1.13rem, -9.94rem 0.86rem, -9.71rem 5.61rem, -9.13rem -4.09rem,
-    -9rem 4.09rem, -10.01rem 5.35rem, -9.25rem -1.68rem, -10.03rem -3.46rem,
-    -10.28rem 5.26rem, -9.59rem 4.54rem, -9.27rem 1.71rem, -9.81rem -0.98rem,
-    -10.15rem 4.26rem, -9.64rem 3.34rem, -9.74rem -3.32rem, -9.7rem 3.02rem,
-    -9.54rem -2.53rem, -9.72rem -5.11rem, -9.74rem -0.9rem, -10.42rem 1.07rem,
-    -9.97rem -4.97rem, -10.31rem 3.46rem, -9.5rem -1.48rem, -9.83rem -3.69rem,
-    -9.01rem -4.57rem, -10.2rem 5.12rem, -10.09rem 4.9rem, -10.02rem 1.27rem,
-    -9.72rem 5.87rem, -10.44rem -2.4rem, -9.54rem -0.44rem, -9.77rem -1.84rem,
-    -9.6rem -4.52rem, -9.98rem -5.55rem, -9.52rem -5.91rem, -9.17rem 0.34rem,
-    -9.89rem -3.22rem, -10.41rem -3.48rem, -9.81rem 0.41rem, -9.25rem 2.76rem,
-    -10.18rem 0.62rem, -9.85rem -4.05rem, -10.16rem -1.2rem, -10.05rem -3.1rem,
-    -9.26rem 0.76rem, -10.33rem -2.79rem, -9.3rem -4.36rem, -9.5rem -1.16rem,
-    -10.4rem -3.99rem, -9.69rem 3.83rem, -9.89rem -4.2rem, -9.91rem 1.73rem,
-    -9.18rem -4.52rem, -9.45rem -0.21rem, -10.13rem -2.21rem, -10.42rem -0.41rem,
-    -10.09rem 1.79rem, -10.49rem -5.07rem, -9.06rem 0.19rem, -9.93rem -1.87rem,
-    -9.78rem 2.84rem, -9.41rem -5.39rem, -9.96rem 0.2rem, -9.43rem -3.65rem,
-    -10.2rem 4.63rem, -10.25rem -4.6rem, -9.91rem -0.52rem, -10.46rem 3.32rem,
-    -9.05rem -4.31rem, -9.2rem -2.28rem, -9.92rem 4.51rem, -10.34rem 2.26rem,
-    -9.41rem -3.09rem, -9.66rem 1.52rem, -10.06rem 3.62rem, -9.19rem 4.87rem,
-    10.33rem 0.81rem, 9.51rem 4.51rem, 10.38rem -1.17rem, 9.17rem -4.79rem,
-    9.55rem 1.64rem, 10.16rem 5.92rem, 9.95rem -3.98rem, 10.44rem -5.74rem,
-    10.35rem -3.05rem, 10.1rem 0.02rem, 10.45rem -5.31rem, 9.86rem 5.84rem,
-    10.08rem -5.82rem, 9.13rem 0.5rem, 9.63rem 5.18rem, 9.69rem -5.69rem,
-    9.83rem -4.77rem, 9.09rem -0.65rem, 10.31rem -1.73rem, 9.71rem -5.92rem,
-    10.32rem 4.65rem, 9.08rem -4.68rem, 9.04rem 5.98rem, 10.14rem -2.67rem,
-    10.03rem 2.45rem, 9.42rem 2.84rem, 9.46rem 5.54rem, 9.43rem -5.18rem,
-    10.21rem 1.34rem, 9.19rem -0.12rem, 9.18rem -2.34rem, 10.2rem -5.14rem,
-    10.33rem -1.57rem, 10.37rem 1.87rem, 9.48rem 0.42rem, 9.11rem -1.68rem,
-    9.17rem -1.01rem, 9.13rem -5.73rem, 10.11rem 1.58rem, 9.04rem -3.21rem,
-    9.28rem 5.3rem, 9.91rem -3.82rem, 9.42rem -2.13rem, 9.11rem 5.39rem,
-    9.31rem 3.84rem, 10.45rem 5.76rem, 9.98rem 1.95rem, 9.11rem -1.25rem,
-    9.39rem -1.85rem, 9.27rem -5.62rem, 10.18rem -5.4rem, 9.55rem -0.04rem,
-    9.53rem -4.21rem, 9.87rem -5.61rem, 10.06rem 3.48rem, 10.36rem 1.22rem,
-    10.34rem -4.66rem, 10.3rem 2.71rem, 10.32rem 1.26rem, 10.07rem -2.15rem,
-    9.34rem -0.03rem, 9.44rem -3.2rem, 10.01rem -5.75rem, 10.08rem -0.4rem,
-    9.31rem 0.62rem, 9.12rem 4.47rem, 9.62rem -1.51rem, 9.53rem -2.37rem,
-    9.33rem 1.99rem, 9.64rem 3.77rem, 9.06rem -4.67rem, 9.66rem 5.23rem,
-    10.12rem -1.99rem, 10.49rem -1.03rem, 9.28rem 0.29rem, 9.43rem 2.84rem,
-    9.06rem -1.62rem, 10.45rem 1.36rem, 9.58rem 0.6rem, 9.11rem 5.75rem,
-    9.87rem -3.77rem, 9.53rem 0.12rem, 10.48rem -0.8rem, 9.65rem 4.41rem,
-    9.37rem 1.94rem, 10.12rem -3.57rem, 10.29rem 4.81rem, 10.34rem 1.26rem,
-    9.65rem -4.04rem, 9.75rem 0.11rem, 9.34rem 3.21rem, 9.48rem -1.67rem,
-    9.88rem 4.72rem, 9.15rem 2.95rem, 10.47rem 5.04rem, 9.09rem -5.35rem,
-    9.47rem 0.21rem, 9.42rem 1.52rem, 10.48rem 4.91rem, -5.14rem 9.76rem,
-    -1.24rem 9.96rem, 2.18rem 9.85rem, 2.23rem 9.02rem, 2.97rem 9.69rem,
-    -3.87rem 10.48rem, -2.35rem 9.32rem, -3.57rem 10.41rem, -5.15rem 10.07rem,
-    -1.2rem 9.6rem, -3.99rem 9.84rem, 2.19rem 9.6rem, -2.45rem 10.16rem,
-    -2.56rem 9.28rem, 2.76rem 9.01rem, 5.8rem 9.92rem, 4.78rem 10.42rem,
-    5.52rem 10.2rem, -2.08rem 10.47rem, -1.81rem 9.83rem, 3.73rem 9.78rem,
-    0.63rem 9.68rem, 1.73rem 9.61rem, -0.91rem 10.33rem, 1.54rem 10.18rem,
-    4rem 9.88rem, -4.1rem 10.43rem, 4.84rem 10.35rem, -2.59rem 10.33rem,
-    2.28rem 9.15rem, -5.8rem 9.11rem, -1.04rem 9.89rem, -1.34rem 10.29rem,
-    4.23rem 9.37rem, -0.91rem 10.38rem, 1.29rem 9.73rem, -2.27rem 9.69rem,
-    -3.92rem 9.32rem, -4.86rem 10.33rem, -1.4rem 10.35rem, -1.76rem 9.88rem,
-    -5.02rem 9.44rem, -4.57rem 10.03rem, -3.92rem 10.04rem, 4.42rem 9.42rem,
-    -3.31rem 9.99rem, 3.29rem 9.71rem, -2.32rem 9.67rem, -0.56rem 10.46rem,
-    1.49rem 9.19rem, 2.62rem 9.37rem, 2.86rem 9.08rem, 2.75rem 10.28rem,
-    -3.56rem 10.49rem, -0.36rem 10.38rem, 0.73rem 10.43rem, 5.19rem 9.92rem,
-    -5.44rem 9.77rem, -5.48rem 9.2rem, 4.84rem 10.24rem, -2.52rem 10.23rem,
-    5.94rem 9.01rem, -5.3rem 10.08rem, -0.65rem 9.88rem, 3.3rem 10.46rem,
-    4.7rem 10.28rem, 4.18rem 9.56rem, 3.15rem 9.17rem, 3.76rem 10.13rem,
-    -4.41rem 9.15rem, -3.76rem 9.46rem, 3.87rem 10.01rem, 1.07rem 10.08rem,
-    -4.31rem 9.4rem, -5.44rem 10.49rem, -1.76rem 9.1rem, -1.37rem 9.68rem,
-    5.52rem 9.89rem, 0.33rem 9.48rem, -0.5rem 10.26rem, -0.71rem 9.91rem,
-    -1.2rem 9.64rem, 0.61rem 10.31rem, -0.2rem 9.74rem, 0.17rem 9.54rem,
-    -5.84rem 9.49rem, 0.93rem 10.14rem, -3.43rem 9.94rem, 1.4rem 9.72rem,
-    -4.64rem 9.54rem, 4.21rem 9.58rem, 5.52rem 9.63rem, -2.95rem 9.15rem,
-    5.49rem 9.85rem, 5.71rem 9.61rem, 4.01rem 9.78rem, 0.85rem 9.25rem,
-    -4.1rem 9.08rem, 0.64rem 9.28rem, -1.89rem -9.52rem, 2.13rem -9.43rem,
-    -3.26rem -10.44rem, -4.97rem -9.42rem, -1.58rem -10.41rem, -0.42rem -9.03rem,
-    -5.7rem -9.87rem, -1.91rem -9.92rem, -4.61rem -10.45rem, 0.07rem -10.19rem,
-    5.23rem -10.12rem, 0.96rem -9.6rem, -5.85rem -9.28rem, -0.07rem -9.71rem,
-    0.08rem -9.61rem, 4.23rem -10.45rem, -5.69rem -10.48rem, 3.02rem -10.16rem,
-    5.14rem -9rem, 0.36rem -10.42rem, -5.39rem -9.04rem, -1.34rem -10.02rem,
-    2.26rem -9.2rem, 4.6rem -10.19rem, 2.78rem -9.69rem, 5.93rem -9.32rem,
-    2.89rem -10.02rem, 0.04rem -9.87rem, -5.54rem -9.04rem, 3.96rem -10.38rem,
-    -5.96rem -9.67rem, 0.58rem -9.31rem, 4.91rem -9.85rem, 3.01rem -10.37rem,
-    -5.09rem -9.41rem, 5.59rem -10.17rem, -3.01rem -10.33rem, 3.73rem -10.46rem,
-    -5.72rem -9.77rem, -3.29rem -9.73rem, 1.02rem -9.6rem, 2.86rem -9.93rem,
-    -5.6rem -9.83rem, 0.3rem -9.03rem, 3.18rem -9.53rem, -2.36rem -9.55rem,
-    5.12rem -9.98rem, 5.9rem -9.09rem, 5.98rem -10.41rem, -3.3rem -9.23rem,
-    -5.73rem -10.01rem, -1.04rem -9.78rem, 1.88rem -9.85rem, 2.12rem -9.45rem,
-    -0.3rem -10.33rem, -5.31rem -9.68rem, -5.27rem -10.16rem, -2.45rem -10.02rem,
-    -1.4rem -10.1rem, 2.59rem -10.3rem, 3.89rem -9.83rem, -4.36rem -10.26rem,
-    0.83rem -10.36rem, 2.97rem -10.39rem, -3.23rem -9.93rem, 0.18rem -9.39rem,
-    -5.29rem -10.36rem, 4.95rem -10.3rem, -2.77rem -9.29rem, 1.92rem -9.56rem,
-    -5.48rem -10.21rem, 3.29rem -9.53rem, -1.32rem -9.99rem, 4.13rem -10.27rem,
-    3.89rem -9.53rem, -4.26rem -9.59rem, -3.98rem -9rem, -2.2rem -10.32rem,
-    -0.38rem -10.36rem, 1.07rem -10.18rem, 2.71rem -9.76rem, -1.08rem -9.94rem,
-    4.29rem -9.39rem, -0.59rem -9.35rem, -4.56rem -10.18rem, -4.19rem -9.52rem,
-    -0.37rem -10.3rem, -1.76rem -9.41rem, 0.11rem -9.46rem, 5.08rem -9rem,
-    0.84rem -9.45rem, -3.83rem -9.25rem, 1.81rem -9.43rem, -4.91rem -9.22rem,
-    -1.74rem -9.87rem, -0.77rem -9.4rem, -5.67rem -9.43rem, 5.87rem -9.27rem,
-    -2.2rem -9.8rem;
-  color: rgba(190, 190, 190, 0.25);
-  content: "";
-  display: block;
-  height: 0.1rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  width: 0.1rem;
-}
-
-.solar-asteroidbelt::after {
-  transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-}
-
-.solar-jupiter > .solar-object {
-  width: 1.75rem;
-}
-
-.solar-jupiter > .solar-object::before {
-  background: #e96b77;
-  height: 1.75rem;
-  width: 1.75rem;
-}
-
-.solar-jupiter.solar-caption:hover ~ .solar-system .solar-jupiter {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-saturn > .solar-object {
-  width: 1.54rem;
-}
-
-.solar-saturn > .solar-object::before {
-  background: #e7a155;
-  box-shadow: 0 0 0 0.2rem #181818, 0 0 0 0.4rem rgba(231, 161, 85, 0.2),
-    0 0 0 0.5rem rgba(231, 161, 85, 0.1), 0 0 0 0.7rem rgba(231, 161, 85, 0.1);
-  height: 1.54rem;
-  width: 1.54rem;
-}
-
-.solar-saturn.solar-caption:hover ~ .solar-system .solar-saturn {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-uranus > .solar-object {
-  width: 0.95rem;
-}
-
-.solar-uranus > .solar-object::before {
-  background: #86e5f8;
-  height: 0.95rem;
-  width: 0.95rem;
-}
-
-.solar-uranus.solar-caption:hover ~ .solar-system .solar-uranus {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-neptune > .solar-object {
-  width: 0.94rem;
-}
-
-.solar-neptune > .solar-object::before {
-  background: #95b4fb;
-  height: 0.94rem;
-  width: 0.94rem;
-}
-
-.solar-neptune.solar-caption:hover ~ .solar-system .solar-neptune {
-  border: 0.05rem solid rgba(190, 190, 190, 0.15);
-  box-shadow: inset 0 0 1rem rgba(190, 190, 190, 0.05);
-  opacity: 1;
-}
-
-.solar-moon > .solar-object::before {
-  background: #a9d3ee;
-  height: 0.05rem;
-  width: 0.05rem;
-}
-
-.solar-caption {
-  display: -ms-flexbox;
+.space-information {
   display: flex;
-  height: 2rem;
-  line-height: 1rem;
-  opacity: 0.4;
-  padding: 0.5rem;
-  position: relative;
-}
 
-.solar-caption:hover {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  flex-direction: column;
+  padding: 5rem;
 }
-
-.solar-caption:hover .solar-card {
-  display: block;
-}
-
-.solar-caption:hover ~ .solar-system .solar-orbit {
-  opacity: 0.4;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.solar-caption .solar-object {
-  height: 1rem;
-  margin-right: 0.5rem;
-  position: relative;
-}
-
-.solar-caption .solar-object::before {
-  border: 0.1rem solid rgba(24, 24, 24, 0.15);
+.ellipse-container {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  height: 25rem;
   border-radius: 50%;
-  content: "";
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  margin: 0 auto;
+  position: relative;
+  /* top: 7rem; */
 }
 
-.solar-caption .solar-name {
-  font-size: 0.6rem;
-  font-weight: 900;
+.ellipse-container img {
+  background-color: #fff;
+  width: 850px;
+  /* height: 250px; */
+}
+
+.ellipse-container .greeting {
+  position: relative;
+  top: 14rem;
+  left: -7rem;
+  right: 0;
+  margin: 0 auto;
   text-transform: uppercase;
-}
-
-.solar-caption .solar-card {
-  background: #181818;
-  border: 0.1rem solid rgba(190, 190, 190, 0.1);
-  border-radius: 0.1rem;
-  display: none;
-  padding: 0.5rem;
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
-  width: 12rem;
-  z-index: 99999;
-}
-
-.solar-caption .solar-card .solar-name {
-  font-size: 1.2rem;
-  font-weight: 900;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-.solar-caption .solar-card .card-subtitle {
-  font-size: 0.6rem;
+  letter-spacing: 4rem;
+  font-size: 4rem;
   font-weight: 400;
-  opacity: 0.75;
-  text-transform: uppercase;
-}
-
-.solar-caption .solar-card .card-head {
-  font-size: 0.6rem;
-  margin-top: 0.5rem;
   opacity: 0.5;
 }
 
-.solar-system-header {
-  align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  font-weight: 900;
-  left: 0;
-  padding: 1rem;
-  position: fixed;
+.ellipse-container .greeting:after {
+  content: "";
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #0c383e;
+  position: relative;
+  top: -0.65rem;
+  left: -5.05rem;
+}
+
+.ellipse {
+  border-radius: 50%;
+  position: absolute;
   top: 0;
-  z-index: 10000;
+  border-style: solid;
 }
 
-/* .solar-system-header .solar-brand {
-    color: #bebebe;
-  }
-  
-  .solar-system-header .solar-brand:hover,
-  .solar-system-header .solar-brand:focus {
-    opacity: 0.75;
-  }
-  
-  .solar-system-header .solar-github {
-    border: 0.05rem solid #bebebe;
-    border-radius: 0.1rem;
-    color: #bebebe;
-    font-size: 0.6rem;
-    height: 1.2rem;
-    margin-left: 0.5rem;
-    padding: 0.1rem 0.2rem;
-  }
-  
-  .solar-system-header .solar-github:hover,
-  .solar-system-header .solar-github:focus {
-    opacity: 0.75;
-  } */
+.ellipse__outer--thin {
+  width: 99.8%;
+  height: 99.5%;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.1);
+  animation: ellipseOrbit 15s ease-in-out infinite;
+}
 
-/* .solar-system-controls {
-    font-size: 0.7rem;
-    left: 1rem;
-    position: fixed;
-    text-transform: uppercase;
-    top: 4rem;
-    z-index: 99999;
-  }
-  
-  .solar-system-controls .form-switch3d {
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-  }
-  
-  .solar-system-controls .form-switch3d .form-icon {
-    border: 0.1rem solid #d7d7d7;
-    border-radius: 50%;
-    display: block;
-    height: 0.8rem;
-    margin-right: 0.25rem;
-    width: 0.8rem;
-  } */
+.ellipse__outer--thin:after {
+  content: "";
+  background-image: url("../../assets/images/background-travel.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 0;
+  left: 1rem;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  opacity: 1;
+}
 
-/* .solar-ads {
-    border: 0.05rem solid rgba(190, 190, 190, 0.1);
-    bottom: 1rem;
-    display: block;
-    position: fixed;
-    right: 1rem;
-    z-index: 9999;
-  } */
+.ellipse__outer--thick {
+  width: 99.5%;
+  height: 99.5%;
+  border-color: #fff transparent;
+  border-width: 2px;
+  transform: rotate(-45deg);
+  animation: ellipseRotate 15s ease-in-out infinite;
+}
 
-@keyframes pulse-sun {
-  from {
-    box-shadow: 0 0 0 0 #863a0f90;
+.ellipse__orbit {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-width: 2px;
+  border-color: #fff;
+  top: -0.4rem;
+  right: 6.75rem;
+}
+
+.ellipse__orbit:after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes ellipseRotate {
+  0% {
+    transform: rotate(-45deg);
   }
-  to {
-    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  100% {
+    transform: rotate(-405deg);
   }
 }
 
-@keyframes loading {
+@keyframes ellipseOrbit {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes orbit {
-  0% {
-    transform: translate3d(-50%, -50%, 0) rotateZ(0);
-  }
-  100% {
-    transform: translate3d(-50%, -50%, 0) rotateZ(-360deg);
   }
 }
