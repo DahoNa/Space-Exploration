@@ -2,19 +2,9 @@ import React from 'react'
 import './spinner.css'
 const Spinner = () => {
     return (
-        <section className="spinner">
-            <div className="hex-border">
-                <div className="hexagons">
-                    <div className="hexagon"></div>
-                    <div className="hexagon"></div>
-                    <div className="hexagon"></div>
-                    <div className="hexagon"></div>
-                    <div className="hexagon"></div>
-                    <div className="hexagon"></div>
-                    <div className="hexagon"></div>
-                </div>
-            </div>
-        </section>
+        <div class="spinners">
+            <h1>LOADING</h1>
+        </div>
     )
 }
 

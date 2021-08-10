@@ -17,7 +17,7 @@
   width: 70%;
 }
 
-section::before {
+.picture::before {
   content: "";
   display: block;
   position: absolute;
@@ -28,7 +28,7 @@ section::before {
   opacity: 0.9;
   background: linear-gradient(360deg, #000, transparent);
   background: linear-gradient(rgba(0, 0, 40, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../../assets/images/background.jpg");
+    url("../../assets/images/background-picture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

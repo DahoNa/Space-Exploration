@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import Pictures from './pages/Pictures/Pictures'
 import About from './pages/About/About'
-import Wheater from './pages/Wheater/Wheater'
+import SolarSystem from './pages/Solar/SolarSystem'
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/pictures_of_the_day' component={Pictures}/>
-          <Route exact path='/wheater' component={Wheater}/>
+          <Route exact path='/solar_system' component={SolarSystem}/>
           <Route exact path='/about' component={About}/>
           
         </Switch>
