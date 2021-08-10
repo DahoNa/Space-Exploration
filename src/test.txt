@@ -1,0 +1,33 @@
+ {/* {data.map((item, index) => ( */}
+    {!!results ? 
+    (
+        <div className="row " key={results.id}>
+            <div className="col-lg-4">
+                <div className="ellipse-container">
+                    <h2 className="greeting">{results.name}</h2>
+                    <div className="ellipse ellipse__outer--thin">
+                        <div className="ellipse ellipse__orbit"></div>
+                    </div>
+                        {/* <img src={Sun} alt="" /> */}
+
+                    <div className="ellipse ellipse__outer--thick"></div>
+                </div>
+        
+            </div>
+            <div className="col-lg-8">
+                <div className="space-information">
+                    <h1>{results.name}</h1>
+                    <p>Gravity : {results.gravity}</p>
+                </div> 
+            </div>
+        </div>
+    ) 
+    
+    : 
+    
+    (
+        undefined
+    )
+    }
+                    
+{/* ))} */}

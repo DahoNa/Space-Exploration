@@ -9,7 +9,8 @@ import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import Pictures from './pages/Pictures/Pictures'
 import About from './pages/About/About'
-import SolarSystem from './pages/Solar/SolarSystem'
+// import SolarSystem from './pages/Solar/SolarSystem'
+import Solar from './pages/Solar/Solar';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/pictures_of_the_day' component={Pictures}/>
-          <Route exact path='/solar_system' component={SolarSystem}/>
+          <Route exact path='/solar_system' component={Solar}/>
           <Route exact path='/about' component={About}/>
           
         </Switch>
