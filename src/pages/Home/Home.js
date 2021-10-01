@@ -55,24 +55,11 @@ const Home = (props) => {
                <div className=" col-lg-8 center-title mt-5">
                    {/* <span>01 ___ 03</span> */}
                    <h1>SPACE EXPLORATION</h1>
-                   <div className="button-space mt-5">
 
-                    <a href="#" className="btn">Explore!</a>
+                   <div className="button-space mt-5">
+                        <Link to="/solar-system" className="btn">Explore</Link >
                    </div>
                </div>
-               {/* <div className="offset-lg-3 col-lg-3">
-                   <h5>LUNE</h5>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, officia!</p>
-               </div> */}
-
-               {/* <div className="offset-lg-3 col-lg-3">
-                   <h5>© Copyright 2021 - Daho NAHLA. Tous droits réservés.</h5>
-               </div> */}
-
-               {/* <div className="col-lg-3">
-                   <h5>SOLEIL</h5>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, officia!</p>
-               </div> */}
            </div>
        </section>
     )

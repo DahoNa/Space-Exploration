@@ -3,13 +3,14 @@ import './footer.css'
 
 const Footer = () => {
     return (
-        <div className="footer">
-            <div className="container">
-                <div className="row">
-                
-                </div>
-            </div>
-        </div>
+        <footer>
+	<div class="footer-content">
+		<h3>SPACEEX.</h3>
+	</div>
+	<div class="footer-bottom">
+		<p>Created by <strong>Daho Nahla</strong> with <strong>NASA API's</strong> <i class="fas fa-heart"></i> </p>
+	</div>
+</footer>
     )
 }
 

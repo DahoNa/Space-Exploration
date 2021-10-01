@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState } from 'react'
 import './solar.css'
 import Data from '../../components/Data/SolarSystemData.json'
+import Spinner from '../../components/Spinner/Spinner';
 
 const SolarSystem = () => {
 
@@ -10,8 +11,14 @@ const SolarSystem = () => {
     }
 
     console.log(Data)
+
+    const [loading, setLoading] = useState(false)
+
+
+
     return (
         <div className="solar">
+            <h1>SOLAR SYSTEM</h1>
             <div className=" container space-description">
                
                 {Data.map(planet => {
@@ -25,8 +32,15 @@ const SolarSystem = () => {
                                     <div className="ellipse ellipse__outer--thin">
                                         <div className="ellipse ellipse__orbit"></div>
                                     </div>
-                                    
-                                    <img src={planet.image} alt="" />
+                                    {!loading ? 
+                                    (
+                                        <img src={planet.image} alt="" />
+                                    ) 
+                                    : 
+                                    (
+                                        <p>Loading</p>
+                                    )}
+                                   
 
                                     <div className="ellipse ellipse__outer--thick"></div>
                                 </div>
@@ -34,7 +48,7 @@ const SolarSystem = () => {
                             </div>
                             <div className="col-lg-8">
                                 <div className="space-information">
-                                    <h1>{planet.name}</h1>
+                                    <h2>{planet.name}</h2>
                                     <div className="planet-description">
                                     <p>Diameter : {planet.diameter} km</p>    
                                     <p>Velocity : {planet.velocity} km/s</p>

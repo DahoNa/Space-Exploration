@@ -57,7 +57,7 @@ const Pictures = (props) => {
                             ) 
                         : 
                             ( 
-                                <div className="col-lg-12">
+                                <div className="spinner">
                                     <Spinner />
                                 </div>
 

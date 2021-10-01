@@ -1,15 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 .solar {
   font-family: "earthorbiter";
   background: #181818;
   color: #bebebe;
   overflow: hidden;
+  padding-top: 7rem;
+}
+
+.solar h1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rem;
+  font-size: 3.5rem;
+}
+
+.solar h2 {
+  color: #fff;
+}
+
+.solar p {
+  font-family: "Roboto", sans-serif;
 }
 
 .solar .row {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-top: 10rem;
+  padding-bottom: 10rem;
   /* height: 100%; */
 }
 
