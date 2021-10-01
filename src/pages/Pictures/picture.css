@@ -35,10 +35,10 @@
   background-repeat: no-repeat;
 }
 
-/* .picture-day {
-  display: flex;
-  justify-content: center;
-} */
+.picture-day h1 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
 
 .picture-day p {
   color: #fff;
@@ -56,6 +56,7 @@
 }
 .picture-info h3 {
   color: #fff;
+  padding-bottom: 1rem;
 }
 
 .spinner-container {
