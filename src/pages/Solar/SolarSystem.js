@@ -1,16 +1,13 @@
 import React, {useState } from 'react'
 import './solar.css'
 import Data from '../../components/Data/SolarSystemData.json'
-import Spinner from '../../components/Spinner/Spinner';
 
 const SolarSystem = () => {
 
-    function handleClick(e) {   
-        e.preventDefault();    
-        console.log('Le lien a été cliqué.');  
-    }
-
-    console.log(Data)
+    // function handleClick(e) {   
+    //     e.preventDefault();    
+    //     console.log('Le lien a été cliqué.');  
+    // }
 
     const [loading, setLoading] = useState(false)
 
@@ -34,7 +31,7 @@ const SolarSystem = () => {
                                     </div>
                                     {!loading ? 
                                     (
-                                        <img src={planet.image} alt="" />
+                                        <img src={planet.image} alt="Planet Picture" />
                                     ) 
                                     : 
                                     (

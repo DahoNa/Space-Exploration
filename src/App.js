@@ -9,7 +9,6 @@ import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import Pictures from './pages/Pictures/Pictures'
 import About from './pages/About/About'
-// import SolarSystem from './pages/Solar/SolarSystem'
 import Solar from './pages/Solar/Solar';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           <Route exact path='/pictures-of-the-day' component={Pictures}/>
           <Route exact path='/solar-system' component={Solar}/>
           <Route exact path='/about' component={About}/>
-          
         </Switch>
       <Footer/>
     </BrowserRouter>

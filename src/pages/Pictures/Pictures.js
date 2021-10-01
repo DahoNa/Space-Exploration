@@ -4,8 +4,9 @@ import axios from 'axios';
 
 import Spinner from '../../components/Spinner/Spinner';
 
-const apiKey = process.env.REACT_APP_NASA_KEY;
-const Pictures = (props) => {
+// const apiKey = process.env.REACT_APP_NASA_KEY;
+const apiKey = "zZmYTUwkM24aO7fakV34owONmVVz7OnzpBRy5iX1";
+const Pictures = () => {
 
     const [photoData, setPhotoData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -13,13 +14,11 @@ const Pictures = (props) => {
 
     useEffect(() => {
         const fetchPhoto = async () => {
-            // console.log(props)
             const result = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
             .then( result => {
                 setTimeout(() => {
 
                     setPhotoData(result.data)
-                    console.log(photoData)
                     setLoading(true);
                 }, 400)
             })
@@ -32,21 +31,15 @@ const Pictures = (props) => {
 
     }, []);
 
-    // if(!photoData) return <div />;
-
     return (
         <section className="picture">
-            {/* <div className="container"> */}
                 <div className="row mt-5">
                         {loading ?
                         (
                             <>
-                            {/* <div className="picture-date col-lg-12">
-                                <h1>{photoData.title}</h1>
-                            </div> */}
                             <div className="picture-day col-lg-8">
                                 <h1>{photoData.title}</h1>
-                                <a href={photoData.hdurl}><img src={photoData.url} alt="" /> </a>
+                                <a href={photoData.hdurl}><img src={photoData.url} alt="Nasa Picture" /> </a>
                                 <p>© {photoData.copyright}</p>
                             </div>
                             <div className="picture-info col-lg-4">
@@ -64,8 +57,6 @@ const Pictures = (props) => {
                             )
                         }
                 </div>
-            {/* </div> */}
-            
         </section>
     )
 }
