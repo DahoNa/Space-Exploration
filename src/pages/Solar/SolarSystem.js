@@ -11,8 +11,6 @@ const SolarSystem = () => {
 
     const [loading, setLoading] = useState(false)
 
-
-
     return (
         <div className="solar">
             <h1>SOLAR SYSTEM</h1>

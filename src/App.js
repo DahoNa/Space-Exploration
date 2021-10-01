@@ -10,11 +10,13 @@ import Home from './pages/Home/Home'
 import Pictures from './pages/Pictures/Pictures'
 import About from './pages/About/About'
 import Solar from './pages/Solar/Solar';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 
 function App() {
 
   return (
     <BrowserRouter>
+    <ScrollTop/>
       <Header/>
         <Switch>
           <Route exact path='/' component={Home}/>

@@ -41,6 +41,7 @@ header button i {
   z-index: 1;
   display: flex;
   align-items: center;
+  z-index: 10;
 
   /* Animations */
   transition-timing-function: ease-in;
@@ -48,6 +49,7 @@ header button i {
 }
 
 .nav-black {
+  z-index: 10;
   background-color: #181822;
   border-bottom: 1px solid aliceblue;
 }

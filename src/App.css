@@ -13,3 +13,179 @@ html {
   src: local("earthorbiter"),
     url("../src/assets/fonts/earthorbiter.ttf") format("truetype");
 }
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  /* HEADER */
+  .navbar-nav {
+    flex-direction: column !important;
+  }
+
+  /* FOOTER */
+  footer {
+    position: static;
+    bottom: 0 !important;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-bottom p {
+    margin-left: 0px !important;
+  }
+
+  /* PAGE HOME */
+  .landing h1 {
+    font-size: 2.7rem !important;
+  }
+
+  .button-space a {
+    width: 100% !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* PAGE PICTURE */
+
+  .picture-day {
+    width: max-content !important;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+
+  .picture-day h1 {
+    width: 100% !important;
+    font-size: 1.5rem !important;
+    margin-left: -43px;
+  }
+
+  .picture-day p {
+    margin-left: -43px;
+    font-size: 0.8rem !important;
+  }
+
+  .picture-day a img {
+    width: 340px !important;
+    height: 250px !important;
+    margin-left: -43px !important;
+  }
+
+  .picture-info h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .picture-info p {
+    height: max-content;
+  }
+
+  .picture-info h3,
+  p {
+    margin-left: -43px !important;
+  }
+
+  /* PAGE SOLAR SYSTEM */
+  .solar h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .planet-description {
+    padding: 40px !important;
+  }
+  .ellipse-container h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  /* PAGE HOME */
+  .button-space a {
+    width: 30%;
+    font-size: 1.5rem !important;
+  }
+
+  /* PAGE PICTURE */
+
+  /* PAGE SOLAR SYSTEM */
+  /* .ellipse-container h2 {
+    display: none;
+  } */
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+  /* PAGE HOME */
+
+  /* PAGE PICTURE */
+  .picture-day {
+    width: max-content !important;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+
+  .picture-day h1 {
+    width: 100% !important;
+    font-size: 1.5rem !important;
+    margin-left: -43px;
+  }
+
+  .picture-day p {
+    margin-left: -43px;
+    font-size: 0.8rem !important;
+  }
+
+  .picture-day a img {
+    width: 550px;
+    height: 350px;
+    margin-left: -43px !important;
+  }
+
+  .picture-info h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .picture-info p {
+    height: max-content;
+  }
+
+  .picture-info h3,
+  p {
+    margin-left: -43px !important;
+  }
+
+  /* PAGE SOLAR SYSTEM */
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  /* PAGE HOME */
+
+  /* PAGE PICTURE */
+  .picture-day a img {
+    width: 550px;
+    height: 350px;
+    /* margin-left: -43px !important; */
+  }
+  /* PAGE SOLAR SYSTEM */
+}
+
+@media screen and (min-width: 350px) and (max-width: 550px) {
+  .button-space a {
+    width: 80% !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .button-space a {
+    width: 80% !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1440px) {
+  .button-space a {
+    width: 50% !important;
+    font-size: 1.5rem !important;
+  }
+}

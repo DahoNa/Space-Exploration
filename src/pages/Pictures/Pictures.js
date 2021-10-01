@@ -6,11 +6,11 @@ import Spinner from '../../components/Spinner/Spinner';
 
 // const apiKey = process.env.REACT_APP_NASA_KEY;
 const apiKey = "zZmYTUwkM24aO7fakV34owONmVVz7OnzpBRy5iX1";
+
 const Pictures = () => {
 
     const [photoData, setPhotoData] = useState([]);
     const [loading, setLoading] = useState(false);
-   
 
     useEffect(() => {
         const fetchPhoto = async () => {
@@ -32,7 +32,7 @@ const Pictures = () => {
     }, []);
 
     return (
-        <section className="picture">
+        <div className="picture">
                 <div className="row mt-5">
                         {loading ?
                         (
@@ -57,7 +57,7 @@ const Pictures = () => {
                             )
                         }
                 </div>
-        </section>
+        </div>
     )
 }
 
