@@ -33,6 +33,13 @@ header button i {
   width: 100%;
 }
 
+.navbar-nav a:focus {
+  color: #acb1f3;
+}
+
+.navbar-nav a:hover {
+  color: #7d7dff;
+}
 .nav {
   position: fixed;
   top: 0;

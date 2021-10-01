@@ -13,9 +13,10 @@
 .picture .row {
   display: flex;
   align-content: center;
-  /* height: 100vh; */
+  height: 100%;
   width: 70%;
-  padding-top: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .picture::before {
@@ -55,4 +56,19 @@
 }
 .picture-info h3 {
   color: #fff;
+}
+
+.spinner-container {
+  height: 100vh;
+}
+.spinner {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

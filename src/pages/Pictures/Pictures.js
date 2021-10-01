@@ -50,9 +50,11 @@ const Pictures = () => {
                             ) 
                         : 
                             ( 
+                            <div className="spinner-container">
                                 <div className="spinner">
                                     <Spinner />
                                 </div>
+                            </div>
 
                             )
                         }
